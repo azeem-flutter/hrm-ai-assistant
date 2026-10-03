@@ -10,7 +10,7 @@ from pathlib import Path
 
 os.environ.setdefault("DB_USER", "test_user")
 os.environ.setdefault("DB_PASSWORD", "test_password")
-os.environ.setdefault("DB_DSN", "localhost:1521/XEPDB1")
+os.environ.setdefault("DB_DSN")
 os.environ.setdefault("RAG_PROVIDER", "keyword")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
