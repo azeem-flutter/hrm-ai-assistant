@@ -1,0 +1,14 @@
+[
+  {
+    "term": "CEO",
+    "aliases": ["chief executive officer", "chief executive", "top boss", "founder", "president of the company", "company head", "top of the hierarchy"],
+    "meaning": "The one employee at the very top of the org chart — the only row in EMPLOYEES with no manager above them.",
+    "sql_hint": "manager_id IS NULL"
+  },
+  {
+    "term": "department head",
+    "aliases": ["department manager", "head of department", "team lead", "department boss"],
+    "meaning": "The employee referenced as manager for that department.",
+    "sql_hint": "DEPARTMENTS.manager_id joined to EMPLOYEES.employee_id"
+  }
+]

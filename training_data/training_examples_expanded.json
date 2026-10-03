@@ -1,0 +1,3374 @@
+[
+  {
+    "question": "Kitne employees hain company mein?",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show all employees in the IT department",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "list saare employees jo IT department mein kaam karte hain",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Can you pull the records for everyone working in IT?",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "IT department ke members ka poora list de do",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "I need to see all staff members assigned to the IT dept",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "kitne log IT wale hain? unki details dikhao",
+    "sql": "SELECT e.first_name, e.last_name, e.email FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Sabse zyada salary kis employee ki hai?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Employee ka data do jiska naam Ali ho",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me the record for the employee named Ali.",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe Ali ke employee details nikal do.",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Find the employee who is called Ali.",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Database se Ali ka employee information laao.",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Can you fetch the data for the employee whose name is Ali?",
+    "sql": "SELECT * FROM employees WHERE UPPER(first_name) LIKE UPPER('%Ali%')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List employees hired after January 2023",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "January 2023 ke baad hire kiye gaye saare employees ki list do.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which staff members joined the company after Jan 2023?",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe un employees ke naam chahiye jo 2023 ke January ke baad shamil hue hain.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me all the hires made after January 2023.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Jan 2023 ke baad naye aaye workers ka record nikal ke do.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD')",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har employee ki email aur phone number dikhao",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me the email and phone number for every employee.",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe saare employees ki email addresses aur phone numbers batao.",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List out the email and contact number of all staff members.",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har staff member ki email id aur phone number nikal kar do.",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Can you pull up the email and phone details for the entire employee list?",
+    "sql": "SELECT first_name, last_name, email, phone_number FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Total kitni salary di ja rahi hai poori company mein?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Company mein sab employees ki total salary kitni hai?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "What is the total salary payout for the entire company?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Poori company ki annual total salary expenditure kitna hai?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kitne total salary ki cost company ko aati hai?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Total salary spending of the whole company kya hai?",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Average salary of all employees",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "sabhi employees ka average salary kya hai?",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "What is the mean salary for every employee?",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke average mein salary kitni hai sab employees ki.",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Calculate the average pay of all the staff members.",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "All employees ki average salary nikal ke do.",
+    "sql": "SELECT AVG(salary) AS average_salary FROM employees",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Employees jo commission earn karte hain unki list do",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which employees earn commission? Give me the list.",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Commission kamane wale employees ki list nikal do.",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List out all the staff members who are on commission.",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe wo employees batao jo commission receive karte hain.",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Do employees ki listing do jinhe commission milta hai.",
+    "sql": "SELECT first_name, last_name, commission_pct FROM employees WHERE commission_pct IS NOT NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Bottom 5 employees by salary",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM employees ORDER BY salary ASC) WHERE ROWNUM <= 5",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har department mein kitne employees hain?",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Each department mein kitna staff hai?",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "How many employees are there in every department?",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Departments ke hisaab se employee count batayein.",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe ye batayein ki har department mein kitne log kaam karte hain?",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kitne employees hain har department mein, tell me the counts.",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Departments with no employees at all",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which departments are currently empty?",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "kisi bhi employee nahi hai un departments ki list do jo bilkul khali hain",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me the names of all departments that have zero staff members.",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "batao ke kaun sa department abhi tak kisi se bhi shamil nahi hua?",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "I need a list of departments where the employee count is exactly zero.",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har department ka manager kaun hai?",
+    "sql": "SELECT d.department_name, m.first_name, m.last_name FROM departments d JOIN employees m ON d.manager_id = m.employee_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which department has the highest average salary?",
+    "sql": "SELECT * FROM (SELECT d.department_name, AVG(e.salary) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY AVG(e.salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Aise department batao jiska average salary sabse zyada hai.",
+    "sql": "SELECT * FROM (SELECT d.department_name, AVG(e.salary) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY AVG(e.salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Top average salary wala department kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT d.department_name, AVG(e.salary) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY AVG(e.salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Agar dekhein to kis department mein employees ka average pay sab se high hai?",
+    "sql": "SELECT * FROM (SELECT d.department_name, AVG(e.salary) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY AVG(e.salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Average salary ke hisaab se top department kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT d.department_name, AVG(e.salary) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY AVG(e.salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Department ka naam aur uski location ka city batao",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Mujhe department ki name aur uske location ka city chahiye.",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Which departments have which cities as their locations?",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Department ke sath uski city bhi bata do please.",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Kya department ki naam aur location city ka data milega?",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Give me the department names along with their respective location cities.",
+    "sql": "SELECT d.department_name, l.city FROM departments d JOIN locations l ON d.location_id = l.location_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS"
+    ]
+  },
+  {
+    "question": "Job titles ke sath minimum aur maximum salary dikhao",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Show me the min and max salary for each job title",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Har job title ka lowest aur highest salary kya hai?",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Break down the salary range (min-max) by position",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke alag alag roles ki salary ka range kya hai, yaani minimum se maximum tak",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "What are the salary boundaries for every job role in the table?",
+    "sql": "SELECT job_title, min_salary, max_salary FROM jobs",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Employees earning more than the max salary for their job",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Who are the employees making more than the highest salary assigned to their job title?",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Aise employees kaun hain jinki salary unke job ke max salary se zyada hai?",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "List the staff whose pay exceeds the maximum limit for their respective positions.",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Employees jinke paas salary unke role ke maximum se upar hai, unko batao.",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Which workers are paid above the ceiling salary for their specific job?",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Which job has the most employees currently?",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Currently, which job title has the highest number of people working on it?",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kaun sa job sab se zyada employees ko assign hai abhi?",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "I want to find the job with the maximum headcount right now.",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Batao ke abhi kis position mein sab se zyada staff shamil hai?",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which position currently holds the largest workforce?",
+    "sql": "SELECT * FROM (SELECT j.job_title, COUNT(e.employee_id) AS emp_count FROM jobs j JOIN employees e ON e.job_id = j.job_id GROUP BY j.job_title ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Sabse zyada salary range wali job kaunsi hai?",
+    "sql": "SELECT * FROM (SELECT job_title, (max_salary - min_salary) AS salary_range FROM jobs ORDER BY (max_salary - min_salary) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOBS"
+    ]
+  },
+  {
+    "question": "Job history for employee ID 100",
+    "sql": "SELECT jh.start_date, jh.end_date, jh.job_id, jh.department_id FROM job_history jh WHERE jh.employee_id = 100 ORDER BY jh.start_date",
+    "difficulty": "simple",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Kis employee ne sabse zyada departments change kiye hain?",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Kaunsa employee ne sabse zyada department changes kiye hain?",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Which employee has changed the most number of departments?",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Employee jo sabse zyada jagahon se transfer hua, wo kaun hai?",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Saba se zyada department changes kaunse employee ne kiye hain?",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Tell me which employee changed departments the most often.",
+    "sql": "SELECT * FROM (SELECT employee_id, COUNT(DISTINCT department_id) AS dept_changes FROM job_history GROUP BY employee_id ORDER BY COUNT(DISTINCT department_id) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Employees who changed jobs within the same department",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Which employees stayed in the same department but changed their job role?",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Woh employees kaun hain jo same department ke andar hi apna job change kiya?",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "List the staff members who had a job rotation within their existing department.",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Kya koi employee ne apni department change kiye bina sirf job title change ki hai?",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Find all cases where an employee's position changed but their department remained the same.",
+    "sql": "SELECT DISTINCT e.first_name, e.last_name FROM employees e JOIN job_history jh ON e.employee_id = jh.employee_id WHERE jh.department_id = e.department_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Har country mein kitne employees kaam karte hain?",
+    "sql": "SELECT c.country_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id GROUP BY c.country_name",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Show job title, city and country for every employee",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Kya aap mujhe har employee ka job title, city aur country show kar sakte hain?",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "List out the job title, city, and country for all the employees in the system.",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke sabhi employees ka job title, city aur country kya hai?",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "I need to see the job title, city, and country details for every single employee.",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Har employee ke liye unka job title, city aur country nikal ke do.",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOBS",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Kaunse region mein sabse zyada employees hain?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Which region has the highest number of employees?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Sabse zyada staff kaunse region mein assign hain?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Kis region mein employees ki count sabse high hai?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Agar hum regions ko employees ke hisaab se rank karein, toh top pe kaun aayega?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Region wise dekho, kis jagah pe logon ki number sabse zyada hai?",
+    "sql": "SELECT * FROM (SELECT r.region_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id JOIN regions r ON c.region_id = r.region_id GROUP BY r.region_name ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "List all countries with their region name",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Mujhe saare countries ki list do aur unke region names ke saath.",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Which countries are in which region? Give me the full list.",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Region name batao har country ke liye, complete list chahiye.",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Show me every country paired with its corresponding region name.",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Kisi bhi tarah se, mujhe countries aur unke regions ka data nikal do.",
+    "sql": "SELECT c.country_name, r.region_name FROM countries c JOIN regions r ON c.region_id = r.region_id",
+    "difficulty": "simple",
+    "tables_used": [
+      "COUNTRIES",
+      "REGIONS"
+    ]
+  },
+  {
+    "question": "Employees based in Pakistan ki list do",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Pakistan mein based sabhi employees ki list nikal do",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "List out all the employees who are located in Pakistan",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Pakistan se affiliated employees ka poora record do",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Jo log Pakistan mein kaam karte hain unki details lao",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Show me the list of staff members based in Pakistan",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE UPPER(c.country_name) = UPPER('Pakistan')",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES",
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "COUNTRIES"
+    ]
+  },
+  {
+    "question": "Show full employee profile with department, job and location from the summary view",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "summary view mein employees ka full profile dikhao jisme department, job aur location bhi ho",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "I need the complete employee details including their department, job title, and location from the summary view",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Woh summary view se employee ka poora data nikalo, lekin department, job aur location ke sath",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Give me the full employee profile from the summary view, making sure to include department, job, and location",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "summary view se employees ke baare mein full info chahiye, aur saath mein unka department, job aur location bhi batana",
+    "sql": "SELECT first_name, last_name, job_title, department_name, city, country_name FROM emp_details_view",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Region-wise employee salary summary nikaalo view se",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "View se region ke hisaab se employee salaries ka summary nikal do",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Can you pull the employee salary summary by region from the view?",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Region-wise salary breakdown karo employees ka, use the view",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "View mein se region ke according employees ko milakar unki average salary dikhao",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Give me a summary of employee salaries grouped by region using the view",
+    "sql": "SELECT region_name, COUNT(*) AS employee_count, AVG(salary) AS avg_salary FROM emp_details_view GROUP BY region_name",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "IT department mein highest paid employee kaun hai (view se)?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "IT department ke employees mein se sabse zyada salary wala kaun hai? (view use karein)",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "View se dekh kar bataiye IT department mein top paid employee kaun hai?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Which employee in the IT department has the highest salary according to the view?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "IT walon mein sabse kamzor pocket nahi, sabse badi salary kis ke paas hai? View se nikalo.",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Highest paid person in IT department ka naam kya hai? (Please use the view)",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM emp_details_view WHERE UPPER(department_name) = UPPER('IT') ORDER BY salary DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMP_DETAILS_VIEW"
+    ]
+  },
+  {
+    "question": "Total sales kitni hui is mahine?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Is mahine ke total sales kitne hain?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Tell me the total sales for this month.",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Mahine bhar ki overall sales ka figure kya hai?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Kitna sales hua hai aaj tak is mahine mein?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the total sales figure for the current month?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM')",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sales in the last 7 days",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Last week ki sales kitni hui?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What were the total sales figures for the past 7 days?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Pichle 7 din mein sales ka total bata do.",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Can you pull up the sales data from the last 7 days?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Aaj se 7 din pehle tak ki sales kitni hain?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Top 10 customers by total order value",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which are the top 10 customers with the highest total order value?",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Total order value ke hisaab se top 10 customers kaun hai?",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "List the top 10 customers ranked by their aggregate spending on orders.",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe dikhao kis 10 customers ne sab se zyada total order value generate ki hai.",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Can you pull the top 10 customers based on the sum of their order values?",
+    "sql": "SELECT * FROM (SELECT customer_name, SUM(total_amount) AS total_spent FROM commercial_orders GROUP BY customer_name ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sabse zyada bikne wala product kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which product has the highest sales?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Top selling product kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sabse zyada demand wala product kya hai?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Jo product sabse zyada bikta hai, uska naam kya hai?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the best-selling item in the database?",
+    "sql": "SELECT * FROM (SELECT product_name, SUM(quantity) AS total_qty FROM commercial_orders GROUP BY product_name ORDER BY SUM(quantity) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Compare this month vs last month sales",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Is mahine aur pichle mahine ki sales compare karo",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "This month ki sales last month se kitni farq karein?",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Compare the sales performance of this month against last month",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Last month vs this month sales ka comparison do please",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Can you show me how this month's sales stack up against last month?",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Cancelled orders ki list do jo pichle mahine ki hain",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Last month ke cancelled orders ka data dekho",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Jo orders pichle mahine cancel hue the unki list bana do",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Show me the list of cancelled orders from the previous month",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Pichle mahine mein cancel hone wale orders details share karo",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Cancelled orders ki table do jo last month ki hain",
+    "sql": "SELECT order_number, customer_name, total_amount, order_date FROM commercial_orders WHERE UPPER(order_status) = UPPER('Cancelled') AND order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Har sales channel se kitni total sales hui?",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Total sales by each sales channel kya hai?",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Kitni sales hui hain har channel se alag alag?",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Break down the total sales for every sales channel.",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke har sales channel ki total sales kitni hai.",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Each sales channel se kitni total sales hui hain? Batao.",
+    "sql": "SELECT sales_channel, SUM(total_amount) AS total_sales FROM commercial_orders GROUP BY sales_channel",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Orders with the highest discount amount given",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Jo orders mein sabse zyada discount mila hai unko niche dikhao",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which orders got the maximum discount?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Highest discount wale orders kya hain?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Please list the orders where the discount amount was the highest",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Un orders ka naam batao jahan discount sabse zyada tha",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, discount_amount FROM commercial_orders ORDER BY discount_amount DESC) WHERE ROWNUM <= 10",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Kaunse city mein sabse zyada orders aaye hain?",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which city has received the most orders?",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sabse zyada orders kis city ke liye aaye hain?",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe batao kis city ki orders ki sankhya sabse zyada hai.",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "City-wise sabse zyada orders kaun sa number aaya hai?",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Highest order count wali city kaunsi hai?",
+    "sql": "SELECT * FROM (SELECT city, COUNT(*) AS order_count FROM commercial_orders GROUP BY city ORDER BY COUNT(*) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Average order value by payment method",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Give me the average order value for each payment method",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Payment method ka average order value kya hai?",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Calculate the mean order value grouped by how they paid",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Aap batayein ke har payment mode ka avg order kitna hai",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the average value of orders split by payment type?",
+    "sql": "SELECT payment_method, AVG(total_amount) AS avg_order_value FROM commercial_orders GROUP BY payment_method",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Orders jo abhi tak ship nahi hui (shipped nahi)",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which orders are still pending shipment and have not been shipped yet?",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Aise orders dikhao jo abhi tak ship nahi hue hain.",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "List all the orders that are currently unshipped.",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Jo orders abhi bhi packed hain lekin ship nahi hue, unki details sunao.",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Kya orders abhi tak shipping process se pass nahi hue hain?",
+    "sql": "SELECT order_number, customer_name, order_date FROM commercial_orders WHERE ship_date IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sales rep ke hisaab se total revenue generate hui, top 5 dikhao",
+    "sql": "SELECT * FROM (SELECT sales_rep_id, SUM(total_amount) AS total_revenue FROM commercial_orders GROUP BY sales_rep_id ORDER BY SUM(total_amount) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Average delivery time in days from order to delivery",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the average number of days it takes to deliver an order?",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Order se delivery tak kitne days lagte hain average mein?",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Can you tell me the mean delivery time in days from when an order is placed?",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Average delivery duration kitna hai days mein?",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "How many days does it typically take for an order to be delivered on average?",
+    "sql": "SELECT AVG(delivery_date - order_date) AS avg_delivery_days FROM commercial_orders WHERE delivery_date IS NOT NULL",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Category wise total tax collect hui kitni?",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Har category mein overall tax collection kitni hai?",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Group by category and show me the total tax collected.",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke har category ki sum of collected tax konni hai?",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Total tax collected per category kya hai?",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Category basis par total tax collection ka figure do.",
+    "sql": "SELECT category, SUM(tax_amount) AS total_tax FROM commercial_orders GROUP BY category",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Customers who placed more than 5 orders",
+    "sql": "SELECT customer_name, COUNT(*) AS order_count FROM commercial_orders GROUP BY customer_name HAVING COUNT(*) > 5",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Purchase orders with a delivery date in the next 30 days",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Show me all purchase orders scheduled for delivery within the next 30 days.",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe un purchase orders ki list do jinki delivery date agle 30 din ke andar hai.",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Which POs are due for delivery in the coming month?",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Agle 30 dino mein delivery hone wali purchase orders ka data nikal do.",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Can you pull up the purchase orders that have a delivery date less than 30 days from today?",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30)",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Sabse zyada quantity wala purchase order kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Which purchase order has the highest quantity?",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Jisme sabse zyada quantity hai wo purchase order kon sa hai?",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Max quantity wala purchase order nikal do please.",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Tell me the purchase order with the largest quantity.",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Quantity mein sabse aage kaunsa purchase order hai?",
+    "sql": "SELECT * FROM (SELECT po_number, total_quantity FROM purchase_orders ORDER BY total_quantity DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Transport mode ke hisaab se kitne purchase orders hain?",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Kitne purchase orders har transport mode ke liye exist karte hain?",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Break down the purchase orders by transport mode.",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe batayein ke alag alag transport modes se kitni purchasing hui hai.",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the count of purchase orders for each shipping mode?",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Har transport mode ke andar total kitne POs hain?",
+    "sql": "SELECT transport_mode, COUNT(*) AS po_count FROM purchase_orders GROUP BY transport_mode",
+    "difficulty": "simple",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Purchase orders whose delivery date has already passed but status looks pending",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Which purchase orders have a delivery date that is in the past but still show as pending?",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe wo purchase orders chahiye jinkay delivery date already pass ho chuki hai lekin status abhi bhi pending hai.",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Find all POs where the delivery date has gone by yet the status hasn't been updated from pending.",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Kisi bhi purchase order ki delivery date ho chuki hai aur status pending hai, unko nikalo please.",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "List the purchase orders that are overdue based on delivery date but still marked as pending.",
+    "sql": "SELECT po_number, dest, delivery_date FROM purchase_orders WHERE delivery_date < SYSDATE",
+    "difficulty": "medium",
+    "tables_used": [
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "How many ratio packs are on each purchase order?",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Kun ratio packs har purchase order mein hain?",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Please tell me the count of ratio packs included in every PO.",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Har purchase order pe kitne ratio packs dete hain?",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "What is the quantity of ratio packs per purchase order?",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke each PO mein ratio packs ki ginti kya hai.",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Sabse mehnga ratio pack kaunsa hai cost ke hisaab se?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Cost ke basis par sabse zyada mehnga ratio pack konsa hai?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Which ratio pack is the most expensive if we look at their costs?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Mujhe batayein kaunsa ratio pack sabse high cost wala hai?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Ratio packs mein sabse expensive pack kaunsa hai amount ke hisaab se?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Sabse costliest ratio pack kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT ratio_pack_description, ratio_pack_cost FROM ratio_packs ORDER BY ratio_pack_cost DESC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Total order value of all ratio packs linked to a specific PO",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Kaunsa specific PO hai jiske linked all ratio packs ka total order value kya hai?",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Give me the sum of order values for every ratio pack associated with that particular PO.",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Us specific PO se connected saare ratio packs ka combined order value nikalo.",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "What is the aggregate order value of all ratio packs tied to the given PO?",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Mujhe us specific PO ke saath linked sabhi ratio packs ka total order value batao.",
+    "sql": "SELECT po_number, SUM(order_value) AS total_order_value FROM ratio_packs WHERE po_number = 'PO1001' GROUP BY po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Ratio packs jo kisi bhi purchase order se link nahi hain",
+    "sql": "SELECT rp.ratio_pack_id, rp.ratio_pack_description FROM ratio_packs rp WHERE NOT EXISTS (SELECT 1 FROM purchase_orders po WHERE po.po_number = rp.po_number)",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Un ratio packs ki list do jo kisi purchase order se connect nahi hain",
+    "sql": "SELECT rp.ratio_pack_id, rp.ratio_pack_description FROM ratio_packs rp WHERE NOT EXISTS (SELECT 1 FROM purchase_orders po WHERE po.po_number = rp.po_number)",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Which ratio packs are not linked to any purchase order?",
+    "sql": "SELECT rp.ratio_pack_id, rp.ratio_pack_description FROM ratio_packs rp WHERE NOT EXISTS (SELECT 1 FROM purchase_orders po WHERE po.po_number = rp.po_number)",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Ratio packs ka data chahiye jo abhi tak kisi PO se associate nahi hue",
+    "sql": "SELECT rp.ratio_pack_id, rp.ratio_pack_description FROM ratio_packs rp WHERE NOT EXISTS (SELECT 1 FROM purchase_orders po WHERE po.po_number = rp.po_number)",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Mujhe un ratio packs ke baare mein batao jo kisi purchase order se relate nahi hain",
+    "sql": "SELECT rp.ratio_pack_id, rp.ratio_pack_description FROM ratio_packs rp WHERE NOT EXISTS (SELECT 1 FROM purchase_orders po WHERE po.po_number = rp.po_number)",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Show ratio pack description along with its purchase order destination",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Ratio pack description aur uske purchase order destination kya hai?",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Please show me the ratio pack description and the destination from its purchase order.",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Purchase order ke destination ke sath ratio pack ki description nikal kar do.",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the ratio pack description associated with the purchase order destination?",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Ratio pack description dekho, saath mein purchase order ka bhi destination batao.",
+    "sql": "SELECT rp.ratio_pack_description, po.dest, po.delivery_date FROM ratio_packs rp JOIN purchase_orders po ON rp.po_number = po.po_number",
+    "difficulty": "medium",
+    "tables_used": [
+      "RATIO_PACKS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Har colour mein kitne line items hain?",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Mujhe batao ke har colour ka line item count kya hai?",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "How many line items are there for each color?",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Har color mein line items ki total number kitni hai?",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "List the count of line items grouped by color.",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Batao ke alag alag colors mein kitne kitne line items hain.",
+    "sql": "SELECT colour, COUNT(*) AS item_count FROM line_items GROUP BY colour",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Line items with the highest unit selling price",
+    "sql": "SELECT * FROM (SELECT ean_barcode, colour, item_size, unit_selling_price FROM line_items ORDER BY unit_selling_price DESC) WHERE ROWNUM <= 10",
+    "difficulty": "simple",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Profit margin nikaalo har line item ka (selling price - cost)",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Calculate the profit margin for every line item using the formula (selling price - cost).",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Har line item ke liye profit margin batao, jahan margin = selling price minus cost hogi.",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Kya aap har line item ka net profit nikaal sakte hain? Bas selling price se cost minus karein.",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "List down the profit margins for all line items by subtracting cost from their selling prices.",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Mujhe har line item ka margin chahiye; selling price aur cost ka difference nikal kar do.",
+    "sql": "SELECT ean_barcode, colour, item_size, (unit_selling_price - unit_cost) AS profit_margin FROM line_items",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Line items grouped by ratio pack, with total break-up quantity",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Ratio pack ke hisaab se line items ko group karo aur total break-up quantity dikhao",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "What is the total break-up quantity for each ratio pack when line items are grouped?",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Line items ko ratio pack wise organize karo with the sum of break-up quantities",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Give me the aggregated break-up quantity for line items grouped by ratio pack",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Ratio pack ke group mein line items ka total break-up quantity kitna hai?",
+    "sql": "SELECT ratio_pack_id, SUM(break_up_qty) AS total_break_up_qty FROM line_items GROUP BY ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Show line item colour and size along with the ratio pack description it belongs to",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Mujhe line item ka colour, size aur uske related ratio pack ka description dikhao.",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "I need to see the color and size of each line item along with the description of the ratio pack it's part of.",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Batao ke har line item ka colour aur size kya hai aur wo kis ratio pack ke under aata hai unke descriptions ke saath.",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Fetch the line item color, size, and the associated ratio pack description for me.",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Ratio pack descriptions ke sath line items ke colour aur size ki details nikal ke do.",
+    "sql": "SELECT li.colour, li.item_size, rp.ratio_pack_description FROM line_items li JOIN ratio_packs rp ON li.ratio_pack_id = rp.ratio_pack_id",
+    "difficulty": "medium",
+    "tables_used": [
+      "LINE_ITEMS",
+      "RATIO_PACKS"
+    ]
+  },
+  {
+    "question": "Kaunsa ratio pack sabse zyada profitable hai total selling value ke hisaab se?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Total selling value ke basis pe sabse zyada profitable ratio pack kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Which ratio pack has the highest profitability based on total selling value?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Ratio packs mein se total selling value ke hisaab se sabse zyada profit de kaunsa hai?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Sabse zyada profitable ratio pack kaunsa hai agar hum total selling value dekhein?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Tell me which ratio pack is the most profitable in terms of total selling value?",
+    "sql": "SELECT * FROM (SELECT rp.ratio_pack_description, SUM(li.unit_selling_price - li.unit_cost) AS total_profit FROM ratio_packs rp JOIN line_items li ON rp.ratio_pack_id = li.ratio_pack_id GROUP BY rp.ratio_pack_description ORDER BY SUM(li.unit_selling_price - li.unit_cost) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "RATIO_PACKS",
+      "LINE_ITEMS"
+    ]
+  },
+  {
+    "question": "Employees whose salary is above the company average",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "kaun se employees ki salary company ke average se zyada hai?",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List all staff members earning more than the mean salary of the firm.",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Company average se high salary wale employees list karo.",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Who are the employees with a salary higher than the organization's average?",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Average salary se upar kitne ya kaun ke employees hain?",
+    "sql": "SELECT first_name, last_name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har department ka naam, uska city aur uska total employee count ek saath dikhao",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me the name, city, and total number of employees for every department.",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Please list each department's name along with its city and the total employee count.",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Har department ka total employees kitne hain aur wo kis city mein hain? Naam bhi dikhao.",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Ek table banao jisme department name, city, aur total employees ka count ho.",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kitne employees hain har department mein? Unka city aur department name bhi batao.",
+    "sql": "SELECT d.department_name, l.city, COUNT(e.employee_id) AS employee_count FROM departments d JOIN locations l ON d.location_id = l.location_id LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name, l.city",
+    "difficulty": "complex",
+    "tables_used": [
+      "DEPARTMENTS",
+      "LOCATIONS",
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which department generated the highest sales revenue if we link sales reps to employees?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Sales reps ko employees se link karke dikhao ke konsa department sab se zyada revenue generate kiya?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "If I join sales reps with the employees table, which department has the top sales revenue?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Jab sales reps aur employees ko join kiya jaye to kis department ki sales revenue sab se high hai?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "What is the department with the highest sales revenue after linking sales reps to their employee records?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Konsa department ne sab se zyada sales kamaya hai agar hum sales reps ko employees se relate karein?",
+    "sql": "SELECT * FROM (SELECT d.department_name, SUM(co.total_amount) AS total_revenue FROM commercial_orders co JOIN employees e ON co.sales_rep_id = e.employee_id JOIN departments d ON e.department_id = d.department_id GROUP BY d.department_name ORDER BY SUM(co.total_amount) DESC) WHERE ROWNUM <= 1",
+    "difficulty": "complex",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "EMPLOYEES",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Employees jinki hire-date 5 saal se zyada purani hai aur abhi bhi active hain",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Pata karo un employees ki details jo 5 saal se zyada purane hain aur abhi bhi active hain.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List out all active employees whose hire-date is older than 5 years.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kaun se employees hi abhi tak chalu hain aur inki tenure 5 saal se zyada hai?",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Find the active staff members who have been hired more than 5 years ago.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Un logon ka naam batao jo 5 saal pehle ya usse pehle join hue the lekin aaj bhi company mein active hain.",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date <= ADD_MONTHS(SYSDATE, -60)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show the 3 most recently hired employees",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Last 3 hired employees kya hain?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Who are the top 3 most recent hires?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe un 3 employees ki details do jo sab se late hire hue hain.",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Give me the names of the 3 newest staff members.",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which 3 people were the most recently added to the team?",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, hire_date FROM employees ORDER BY hire_date DESC) WHERE ROWNUM <= 3",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Managers jinke underneath sabse zyada employees kaam karte hain",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which managers have the most employees working under them?",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Sabse zyada staff kis manager ke neeche kaam karte hain?",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe batayein kis manager ke team members ki sankhya sabse zyada hai.",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Find the manager who supervises the largest number of employees.",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kis manager ke paas sabse zyada employees hain jo unke directly report karte hain?",
+    "sql": "SELECT * FROM (SELECT m.first_name, m.last_name, COUNT(e.employee_id) AS team_size FROM employees e JOIN employees m ON e.manager_id = m.employee_id GROUP BY m.first_name, m.last_name ORDER BY COUNT(e.employee_id) DESC) WHERE ROWNUM <= 5",
+    "difficulty": "complex",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Total commercial orders vs total purchase orders count compare karo",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Compare the count of commercial orders with purchase orders",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Commercial orders aur purchase orders ki total numbers ka comparison kar do",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Kitne commercial orders hain aur kitne purchase orders? Inka compare karo",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the difference in count between total commercial and purchase orders?",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Total commercial vs purchase orders: count ka comparison banao",
+    "sql": "SELECT 'Commercial Orders' AS order_type, COUNT(*) AS total_count FROM commercial_orders UNION ALL SELECT 'Purchase Orders' AS order_type, COUNT(*) AS total_count FROM purchase_orders",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS",
+      "PURCHASE_ORDERS"
+    ]
+  },
+  {
+    "question": "Employees without any job history record",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Jo employees ki koi job history nahi hai unhe list karo.",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Show me all employees that have zero entries in the job history table.",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Un employees ke names batao jinhe ab tak koi job offer ya history record nahi mila.",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Which employees have no job history records?",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Find the employees where the job history count is zero.",
+    "sql": "SELECT e.first_name, e.last_name FROM employees e WHERE NOT EXISTS (SELECT 1 FROM job_history jh WHERE jh.employee_id = e.employee_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "EMPLOYEES",
+      "JOB_HISTORY"
+    ]
+  },
+  {
+    "question": "Sabse purani order kab place hui thi is system mein?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Is system mein pehli order kab aayi thi?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "What is the date of the oldest order in this system?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Sabse purani order ki date kya hai yahan?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Which order was placed first in this system?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Ekdam pehli order kab register hui thi is platform par?",
+    "sql": "SELECT * FROM (SELECT order_number, customer_name, order_date FROM commercial_orders ORDER BY order_date ASC) WHERE ROWNUM <= 1",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Locations without any department assigned",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Show me all locations that do not have a department assigned.",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Kun locations ka pata chahiye jinhe koi department assign nahi hai?",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Which locations are currently unassigned to any department?",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Locations list karo jo bhi empty hain department ke liye.",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "Find every location where no department is linked.",
+    "sql": "SELECT l.location_id, l.city FROM locations l WHERE NOT EXISTS (SELECT 1 FROM departments d WHERE d.location_id = l.location_id)",
+    "difficulty": "medium",
+    "tables_used": [
+      "LOCATIONS",
+      "DEPARTMENTS"
+    ]
+  },
+  {
+    "question": "kitni employees hain jinki salary 50000 se zyada hai",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "50000 se zyada salary wale kitne employees hain?",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "How many employees have a salary greater than 50000?",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Jinki maasik kamai 50k se upar hai unki ghatiya batao",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Tell me the count of staff earning more than fifty thousand",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Kitne logon ki salary 50000+ hai?",
+    "sql": "SELECT COUNT(*) AS employee_count FROM employees WHERE salary > 50000",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "employee id 150 ka poora record dikhao",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Show me the complete record for employee id 150",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Employee 150 ki saari details nikal ke do",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Fetch the full details of employee with id 150",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Mujhe employee id 150 ka complete data dikhao",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "What is the full record of employee id 150?",
+    "sql": "SELECT * FROM employees WHERE employee_id = 150",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "kal kitni sales hui thi",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Yesterday how many sales were recorded?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "kal ki total sales kitni thin?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Tell me the number of sales we had yesterday.",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "Kal sales ka number kya tha?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "How many sales took place on yesterday?",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE TRUNC(order_date) = TRUNC(SYSDATE - 1)",
+    "difficulty": "simple",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "is saal ab tak kitni orders complete hui hain",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "this year so far, koi total completed orders kitne hain?",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "count karo ki aaj tak is saal mein kitni orders complete ho chuki hain",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "how many orders have been completed this year up to now?",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "is saal ki ab tak ki completed orders ki number batana",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "please tell me the total count of completed orders from the start of this year until today",
+    "sql": "SELECT COUNT(*) AS completed_orders FROM commercial_orders WHERE UPPER(order_status) = UPPER('Completed') AND order_date >= TRUNC(SYSDATE, 'YYYY')",
+    "difficulty": "medium",
+    "tables_used": [
+      "COMMERCIAL_ORDERS"
+    ]
+  },
+  {
+    "question": "employees without a manager assigned",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Which employees do not have a manager?",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "wo employees hain jinke koi manager assign nahi hai",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "List all staff members who are currently manager-less",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "mere paas un employees ki list chahiye jo bina manager ke kaam kar rahe hain",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  },
+  {
+    "question": "Who are the employees with no assigned manager?",
+    "sql": "SELECT first_name, last_name FROM employees WHERE manager_id IS NULL",
+    "difficulty": "simple",
+    "tables_used": [
+      "EMPLOYEES"
+    ]
+  }
+]

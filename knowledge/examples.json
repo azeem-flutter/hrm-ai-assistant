@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Show all IT employees who joined after 2023",
+    "sql": "SELECT e.first_name, e.last_name, e.hire_date FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE UPPER(d.department_name) = UPPER('IT') AND e.hire_date >= TO_DATE('2023-01-01', 'YYYY-MM-DD') AND ROWNUM <= 200"
+  },
+  {
+    "question": "How many employees are in each department?",
+    "sql": "SELECT d.department_name, COUNT(e.employee_id) AS employee_count FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name"
+  },
+  {
+    "question": "Top 10 highest paid employees",
+    "sql": "SELECT * FROM (SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC) WHERE ROWNUM <= 10"
+  },
+  {
+    "question": "Departments with no employees",
+    "sql": "SELECT d.department_id, d.department_name FROM departments d WHERE NOT EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id)"
+  },
+  {
+    "question": "Employee names and their department names",
+    "sql": "SELECT e.first_name, e.last_name, d.department_name FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE ROWNUM <= 200"
+  },
+  {
+    "question": "Total salary paid across the company",
+    "sql": "SELECT SUM(salary) AS total_salary FROM employees"
+  },
+  {
+    "question": "Average salary per department",
+    "sql": "SELECT d.department_name, ROUND(AVG(e.salary), 2) AS avg_salary FROM departments d JOIN employees e ON e.department_id = d.department_id GROUP BY d.department_name"
+  },
+  {
+    "question": "Employees hired in the last 30 days",
+    "sql": "SELECT first_name, last_name, hire_date FROM employees WHERE hire_date >= (SYSDATE - 30) AND ROWNUM <= 200"
+  },
+  {
+    "question": "Total sales last month / pichle mahine ki total sale",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')"
+  },
+  {
+    "question": "Pichle 2 mahine ki sale / sales in the last 2 months",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -2), 'MM') AND order_date < TRUNC(SYSDATE, 'MM')"
+  },
+  {
+    "question": "Sales in the last 7 days",
+    "sql": "SELECT SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= SYSDATE - 7"
+  },
+  {
+    "question": "Compare this month vs last month sales",
+    "sql": "SELECT 'Last Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(ADD_MONTHS(SYSDATE, -1), 'MM') AND order_date < TRUNC(SYSDATE, 'MM') UNION ALL SELECT 'Current Month' AS period, SUM(total_amount) AS total_sales FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE, 'MM') AND order_date < SYSDATE"
+  },
+  {
+    "question": "Find employees whose name contains 'ali'",
+    "sql": "SELECT * FROM employees WHERE (UPPER(first_name) LIKE UPPER('%ali%') OR UPPER(last_name) LIKE UPPER('%ali%')) AND ROWNUM <= 200"
+  },
+  {
+    "question": "Who is the manager of each department?",
+    "sql": "SELECT d.department_name, m.first_name, m.last_name FROM departments d JOIN employees m ON d.manager_id = m.employee_id WHERE ROWNUM <= 200"
+  },
+  {
+    "question": "Show job title, city and country for every employee",
+    "sql": "SELECT e.first_name, e.last_name, j.job_title, l.city, c.country_name FROM employees e JOIN jobs j ON e.job_id = j.job_id JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id WHERE ROWNUM <= 200"
+  },
+  {
+    "question": "Employees earning more than the max salary for their job",
+    "sql": "SELECT e.first_name, e.last_name, e.salary, j.max_salary FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE e.salary > j.max_salary AND ROWNUM <= 200"
+  },
+  {
+    "question": "Job history for a specific employee",
+    "sql": "SELECT jh.start_date, jh.end_date, jh.job_id, jh.department_id FROM job_history jh WHERE jh.employee_id = 100 ORDER BY jh.start_date"
+  },
+  {
+    "question": "How many employees work in each country?",
+    "sql": "SELECT c.country_name, COUNT(*) AS employee_count FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id JOIN countries c ON l.country_id = c.country_id GROUP BY c.country_name"
+  },
+  {
+    "question": "Purchase orders with a delivery date in the next 30 days",
+    "sql": "SELECT po_number, dest, transport_mode, delivery_date FROM purchase_orders WHERE delivery_date BETWEEN SYSDATE AND (SYSDATE + 30) AND ROWNUM <= 200"
+  },
+  {
+    "question": "How many ratio packs are on each purchase order?",
+    "sql": "SELECT po_number, COUNT(*) AS ratio_pack_count FROM ratio_packs GROUP BY po_number"
+  },
+  {
+    "question": "Total order value per purchase order",
+    "sql": "SELECT po_number, SUM(TO_NUMBER(order_value)) AS total_order_value FROM ratio_packs GROUP BY po_number"
+  },
+  {
+    "question": "Line items for a specific ratio pack",
+    "sql": "SELECT colour, item_size, break_up_qty, ean_barcode FROM line_items WHERE ratio_pack_id = 1001 AND ROWNUM <= 200"
+  },
+  {
+    "question": "Ratio packs with the highest number of singles per ratio",
+    "sql": "SELECT * FROM (SELECT ratio_pack_id, product_description, no_of_singles_per_ratio FROM ratio_packs ORDER BY no_of_singles_per_ratio DESC) WHERE ROWNUM <= 10"
+  },
+  {
+    "question": "Purchase orders with no ratio packs yet",
+    "sql": "SELECT po.po_number, po.dest FROM purchase_orders po WHERE NOT EXISTS (SELECT 1 FROM ratio_packs rp WHERE rp.po_number = po.po_number)"
+  },
+  {
+    "question": "Show employees with a salary category",
+    "sql": "SELECT * FROM (SELECT e.employee_id, e.first_name, e.last_name, e.salary, CASE NTILE(3) OVER (ORDER BY e.salary) WHEN 1 THEN 'Low' WHEN 2 THEN 'Medium' ELSE 'High' END AS salary_category FROM employees e) WHERE ROWNUM <= 200"
+  },
+  {
+    "question": "Find employees whose salary is greater than the average salary using a CTE",
+    "sql": "WITH avg_salary AS (SELECT AVG(salary) AS avg_sal FROM employees) SELECT e.employee_id, e.first_name, e.last_name, e.salary FROM employees e CROSS JOIN avg_salary a WHERE e.salary > a.avg_sal AND ROWNUM <= 200"
+  },
+  {
+    "question": "Count employees in each salary category",
+    "sql": "SELECT salary_category, COUNT(*) AS employee_count FROM (SELECT CASE NTILE(3) OVER (ORDER BY e.salary) WHEN 1 THEN 'Low' WHEN 2 THEN 'Medium' ELSE 'High' END AS salary_category FROM employees e) GROUP BY salary_category ORDER BY CASE salary_category WHEN 'Low' THEN 1 WHEN 'Medium' THEN 2 ELSE 3 END"
+  },
+  {
+    "question": "How many orders has Ali Khan placed / Ali Khan ne kitne orders kiye hain",
+    "sql": "SELECT COUNT(*) AS order_count FROM commercial_orders WHERE customer_name = 'Ali Khan'"
+  },
+  {
+    "question": "Total spent by a specific customer, e.g. how much has Ahmed Raza spent",
+    "sql": "SELECT SUM(total_amount) AS total_spent FROM commercial_orders WHERE customer_name = 'Ahmed Raza'"
+  },
+  {
+    "question": "Sab se zyada orders kis customer ne place kiye? / Which customer placed the most orders",
+    "sql": "SELECT * FROM (SELECT customer_name, COUNT(*) AS order_count FROM commercial_orders GROUP BY customer_name ORDER BY order_count DESC) WHERE ROWNUM <= 1"
+  },
+  {
+    "question": "Kis customer ne sab se bara order diya? / Which customer placed the single largest order",
+    "sql": "SELECT customer_name, total_amount FROM (SELECT customer_name, total_amount FROM commercial_orders ORDER BY total_amount DESC) WHERE ROWNUM <= 1"
+  },
+  {
+    "question": "Kitne customers ne 5 se zyada orders kiye hain? / How many customers placed more than 5 orders",
+    "sql": "SELECT COUNT(*) AS customer_count FROM (SELECT customer_name FROM commercial_orders GROUP BY customer_name HAVING COUNT(*) > 5)"
+  },
+  {
+    "question": "Kis customer ne doosra bara order diya hai / Which customer placed the 2nd largest order",
+    "sql": "SELECT customer_name, total_amount FROM (SELECT customer_name, total_amount, ROW_NUMBER() OVER (ORDER BY total_amount DESC) AS rn FROM commercial_orders) WHERE rn = 2"
+  },
+  {
+    "question": "Kis customer ne 5va sab se bara order diya hai / Which customer placed the 5th largest order",
+    "sql": "SELECT customer_name, total_amount FROM (SELECT customer_name, total_amount, ROW_NUMBER() OVER (ORDER BY total_amount DESC) AS rn FROM commercial_orders) WHERE rn = 5"
+  },
+  {
+    "question": "Pending orders dikhao / Show all pending orders",
+    "sql": "SELECT * FROM commercial_orders WHERE UPPER(order_status) = UPPER('Pending') AND ROWNUM <= 200"
+  },
+  {
+    "question": "Aaj kitne orders ship hue? / How many orders shipped today",
+    "sql": "SELECT COUNT(*) AS order_count FROM commercial_orders WHERE UPPER(order_status) = UPPER('Shipped') AND ship_date >= TRUNC(SYSDATE) AND ship_date < TRUNC(SYSDATE) + 1"
+  },
+  {
+    "question": "Aaj kitne orders deliver hue? / How many orders delivered today",
+    "sql": "SELECT COUNT(*) AS order_count FROM commercial_orders WHERE UPPER(order_status) = UPPER('Delivered') AND delivery_date >= TRUNC(SYSDATE) AND delivery_date < TRUNC(SYSDATE) + 1"
+  },
+  {
+    "question": "Aaj kitne orders place hue? / How many orders were placed today",
+    "sql": "SELECT COUNT(*) AS order_count FROM commercial_orders WHERE order_date >= TRUNC(SYSDATE) AND order_date < TRUNC(SYSDATE) + 1"
+  },
+  {
+    "question": "Kaun se orders abhi deliver nahi hue? / Which orders have not been delivered yet",
+    "sql": "SELECT * FROM commercial_orders WHERE UPPER(order_status) != UPPER('Delivered') AND ROWNUM <= 200"
+  },
+  {
+    "question": "Pending aur delivered orders ka comparison karo / Compare pending vs delivered orders",
+    "sql": "SELECT order_status, COUNT(*) AS order_count FROM commercial_orders WHERE UPPER(order_status) IN (UPPER('Pending'), UPPER('Delivered')) GROUP BY order_status"
+  },
+  {
+    "question": "Kitne orders abhi shipment mein hain? / How many orders are currently in shipment",
+    "sql": "SELECT COUNT(*) AS order_count FROM commercial_orders WHERE UPPER(order_status) = UPPER('Shipped')"
+  },
+  {
+    "question": "Kaun se orders deliver hone mein sab se zyada time le rahe hain? / Which orders are taking the longest to deliver",
+    "sql": "SELECT * FROM (SELECT order_id, order_number, customer_name, order_date, delivery_date, (delivery_date - order_date) AS delivery_days FROM commercial_orders WHERE UPPER(order_status) = UPPER('Delivered') ORDER BY (delivery_date - order_date) DESC) WHERE ROWNUM <= 200"
+  },
+  {
+    "question": "Average delivery time kitna hai? / What is the average delivery time",
+    "sql": "SELECT ROUND(AVG(delivery_date - order_date), 1) AS average_delivery_days FROM commercial_orders WHERE UPPER(order_status) = UPPER('Delivered')"
+  },
+  {
+    "question": "Kis city mein delivery sab se fast hai? / Which city has the fastest average delivery time",
+    "sql": "SELECT * FROM (SELECT city, ROUND(AVG(delivery_date - order_date), 1) AS average_delivery_days FROM commercial_orders WHERE UPPER(order_status) = UPPER('Delivered') GROUP BY city ORDER BY average_delivery_days ASC) WHERE ROWNUM <= 1"
+  },
+  {
+    "question": "Aise orders batao jo 5 din se zyada mein deliver hue / Show orders that took more than 5 days to deliver",
+    "sql": "SELECT * FROM commercial_orders WHERE UPPER(order_status) = UPPER('Delivered') AND (delivery_date - order_date) > 5"
+  },
+  {
+    "question": "Har department mein 3 sabse kam salary lene wale employees dikhao",
+    "sql": "SELECT * FROM (SELECT e.first_name, e.last_name, e.salary, e.department_id, ROW_NUMBER() OVER (PARTITION BY e.department_id ORDER BY e.salary ASC) AS rn FROM employees e) WHERE rn <= 3"
+  },
+  {
+    "question": "employees whose salary rank is exactly 50",
+    "sql": "SELECT * FROM (SELECT e.first_name, e.last_name, e.salary, DENSE_RANK() OVER (ORDER BY e.salary DESC) AS salary_rank FROM employees e) WHERE salary_rank = 50"
+  },
+  {
+    "question": "Har job_id ke top 3 highest paid employees ki list do",
+    "sql": "SELECT employee_id, first_name, last_name, salary, hire_date, department_name, job_title FROM (SELECT e.employee_id, e.first_name, e.last_name, e.salary, e.hire_date, d.department_name, j.job_title, ROW_NUMBER() OVER (PARTITION BY e.job_id ORDER BY e.salary DESC) AS rn FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN jobs j ON e.job_id = j.job_id) WHERE rn <= 3"
+  },
+  {
+    "question": "Who is the CEO?",
+    "sql": "SELECT * FROM employees WHERE manager_id IS NULL AND ROWNUM <= 1"
+  },
+  {
+    "question": "Which employee has no manager, since that makes them the CEO?",
+    "sql": "SELECT * FROM employees WHERE manager_id IS NULL AND ROWNUM <= 1"
+  }
+]

@@ -1,0 +1,20 @@
+# --- Core (required to run app.py) ---
+streamlit
+oracledb
+pandas
+numpy
+Pillow
+python-dotenv
+ollama
+requests              # used when LLM_PROVIDER=groq
+langchain-core>=0.3,<2
+langgraph>=0.2,<2
+rapidfuzz             # fuzzy Roman Urdu number words (degrades gracefully)
+word2number           # English number words (degrades gracefully)
+
+# --- Tests ---
+pytest
+
+# --- Optional extras (uncomment if needed; app works without them) ---
+# vanna==0.1.0                # hosted Vanna retrieval (RAG_PROVIDER=hybrid|vanna, VANNA_ENABLED=true)
+# sentence-transformers       # in-process embeddings (EMBEDDING_PROVIDER=local)

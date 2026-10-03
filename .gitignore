@@ -1,0 +1,25 @@
+# Secrets - NEVER commit these
+.env
+.github/
+.streamlit/
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated at runtime / by tools
+training_data/chat_finetune_dataset.jsonl
+knowledge/pending_terms.json
+*.log
